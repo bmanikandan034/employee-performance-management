@@ -23,6 +23,7 @@ public class EmployeeController {
 
 	private final EmployeeService employeeService;
 
+	@GetMapping
 	public List<EmployeeResponseDTO> getEmployees(@RequestParam(required = false) Integer score,
 			@RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate reviewDate,
 			@RequestParam(required = false) List<String> departments,
